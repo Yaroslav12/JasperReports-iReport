@@ -1,0 +1,5 @@
+package com.chetty.reporting.beans;
+
+public class DataBean {
+
+}
