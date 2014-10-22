@@ -16,6 +16,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.export.JExcelApiExporter;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
 public class Reporter {
@@ -38,9 +39,22 @@ public class Reporter {
 				parameters, beanColDataSource);
 		JasperExportManager.exportReportToPdfFile(jasperPrint,
 				"/home/heorhi/TestResult.pdf");
+		
+		
+		JRBeanCollectionDataSource beanDataSource = new JRBeanCollectionDataSource(dataBeanList);
+		HashMap<String, Object> jasperParameter = new HashMap<String, Object>();
+		JasperPrint jasperPrint2 = JasperFillManager.fillReport(
+				jasperReport, jasperParameter, beanDataSource);
 	}
 
-	public static void main(String[] args) throws Exception {
-		new Reporter().create();
+	public static void main(String[] args) {
+		System.out.println("Начало генерации отчёта");
+		try {
+			new Reporter().create();
+			System.out.println("Генерация отчёта завершена");
+		} catch (JRException e) {
+			System.out.println("Во время генерации возникла ошибка: "+e);
+		}
+		
 	}
 }

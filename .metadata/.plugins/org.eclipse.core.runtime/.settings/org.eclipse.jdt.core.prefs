@@ -6,3 +6,4 @@ org.eclipse.jdt.core.compiler.compliance=1.7
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.7
+org.eclipse.jdt.core.userLibrary.libsForReport=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/ReportGenerator/lib/com.lowagie.text-2.1.7.jar"/>\n\t<archive path\="/ReportGenerator/lib/commons-logging-1.2.jar"/>\n\t<archive path\="/ReportGenerator/lib/org-apache-commons-logging.jar"/>\n\t<archive path\="/ReportGenerator/lib/org.apache.commons.beanutils.jar"/>\n\t<archive path\="/ReportGenerator/lib/org.apache.commons.collections.jar"/>\n</userlibrary>\n
