@@ -16,11 +16,14 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.export.JExcelApiExporter;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 
 public class Reporter {
 
+	String pathForSaving = "D:\\Free time\\TestResult.pdf";
+	String pathForPattern = "D:\\Free time\\workspace\\JasperReports-iReport\\ReportGenerator\\test_jasper.jrxml";
+	//String pathForSaving = "/home/heorhi/TestResult.pdf"
+	//String pathForPattern = "/home/heorhi/test_jasper.jrxml";
 	public void create() throws JRException {
 		DataBeanMaker dataBeanMaker = new DataBeanMaker();
 		ArrayList<DataBean> dataBeanList = dataBeanMaker.getDataBeanList();
@@ -30,7 +33,7 @@ public class Reporter {
 
 		Map<String, Object> parameters = new HashMap<String, Object>();
 
-		File reportPattern = new File("/home/heorhi/test_jasper.jrxml");
+		File reportPattern = new File(pathForPattern);
 
 		JasperDesign jasperDesign = JRXmlLoader.load(reportPattern);
 		JasperReport jasperReport = JasperCompileManager
@@ -38,13 +41,9 @@ public class Reporter {
 		JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,
 				parameters, beanColDataSource);
 		JasperExportManager.exportReportToPdfFile(jasperPrint,
-				"/home/heorhi/TestResult.pdf");
+				pathForSaving);
 		
-		
-		JRBeanCollectionDataSource beanDataSource = new JRBeanCollectionDataSource(dataBeanList);
-		HashMap<String, Object> jasperParameter = new HashMap<String, Object>();
-		JasperPrint jasperPrint2 = JasperFillManager.fillReport(
-				jasperReport, jasperParameter, beanDataSource);
+
 	}
 
 	public static void main(String[] args) {
