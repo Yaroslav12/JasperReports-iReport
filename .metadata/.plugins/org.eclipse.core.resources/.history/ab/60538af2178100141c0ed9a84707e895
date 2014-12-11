@@ -1,0 +1,34 @@
+package com.chetty.reporting.business;
+
+import java.util.ArrayList;
+
+import com.chetty.reporting.beans.DataBean;
+
+public class DAOStub {
+	
+	public ArrayList<DataBean> getDataBeanList() {
+		ArrayList<DataBean> dataBeanList = new ArrayList<DataBean>();
+		DataBean tempBean = new DataBean();
+		tempBean.setName("Петя");
+		tempBean.setDiscipline("Физика");
+		tempBean.setAbsence(2);
+		dataBeanList.add(tempBean);
+		
+		
+		dataBeanList = new ArrayList<DataBean>();
+		tempBean = new DataBean();
+		tempBean.setName("Вася");
+		tempBean.setDiscipline("История");
+		tempBean.setAbsence(2);
+		dataBeanList.add(tempBean);
+		
+		dataBeanList = new ArrayList<DataBean>();
+		tempBean = new DataBean();
+		tempBean.setName("Ира");
+		tempBean.setDiscipline("Программирование");
+		tempBean.setAbsence(2);
+		dataBeanList.add(tempBean);
+
+		return dataBeanList;
+	}
+}
