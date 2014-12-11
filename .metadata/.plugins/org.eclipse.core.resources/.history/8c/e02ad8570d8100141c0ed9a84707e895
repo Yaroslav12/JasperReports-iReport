@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.chetty.reporting.beans.DataBean;
-import com.chetty.reporting.business.DAOStub;
+import com.chetty.reporting.business.DataBeanMaker;
 
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -25,7 +25,7 @@ public class Reporter {
 	//String pathForSaving = "/home/heorhi/TestResult.pdf"
 	//String pathForPattern = "/home/heorhi/test_jasper.jrxml";
 	public void create() throws JRException {
-		DAOStub dataBeanMaker = new DAOStub();
+		DataBeanMaker dataBeanMaker = new DataBeanMaker();
 		ArrayList<DataBean> dataBeanList = dataBeanMaker.getDataBeanList();
 
 		JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(
