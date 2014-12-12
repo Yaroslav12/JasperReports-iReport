@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="net.sf.jasperreports.engine.export.JExcelApiExporter"/>
+<fullyQualifiedTypeName name="net.sf.jasperreports.engine.JRStyle"/>
+<fullyQualifiedTypeName name="net.sf.jasperreports.engine.xml.JRStyleFactory"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="java.nio.file.Path"/>
 </qualifiedTypeNameHistroy>

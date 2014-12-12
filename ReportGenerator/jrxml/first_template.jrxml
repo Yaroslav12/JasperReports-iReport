@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="first_template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b72c2c80-9324-4359-a0b4-1feff9ba2ede">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Default" isDefault="true" pdfEncoding="Cp1251" pdfFontName="./font/ARIAL.TTF"/>
+	<parameter name="DATE" class="java.util.Date"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="discipline" class="java.lang.String"/>
+	<field name="absence" class="java.lang.Integer"/>
+	<title>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="555" height="20" uuid="eb16ce83-eea5-4eca-b6a2-c14149019045"/>
+				<textFieldExpression><![CDATA[$P{DATE}]]></textFieldExpression>
+				<patternExpression><![CDATA["dd.MM.yyyy HH.mm"]]></patternExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="213" y="0" width="183" height="20" uuid="1adc41ce-7c09-46fe-960a-dff145ad7e50"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{discipline}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="213" height="20" uuid="2f5d59ad-6924-492a-b5c4-f9705cc23650"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="159" height="20" uuid="7f824851-c67d-41c9-ba98-6ab57aa00d47"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{absence}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
